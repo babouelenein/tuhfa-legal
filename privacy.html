@@ -19,21 +19,30 @@
 <p>Your cycle, discharge, postpartum, prayer, fasting and Qada records, your notes, your school and settings, and the prayer location you choose (rounded to about 1 km) are stored in an encrypted database on your phone. The key is kept in the iOS Keychain. Prayer times are calculated on your phone.</p>
 
 <h2>What leaves your phone, and only if you choose it</h2>
-<p><strong>Cloud account (optional).</strong> If you sign in with Apple, we receive a sign-in token from Apple that holds an identifier Apple creates for your use of this app. We do not ask Apple for your name or email. Our backend provider, Supabase, creates an account identifier for you.</p>
-<p><strong>Encrypted backup (Tuhfa Plus).</strong> Before a backup leaves your phone, your records are encrypted on the phone with a key derived from a recovery passphrase that only you know. We store the encrypted file and basic details about it (your account identifier, when it was made, its size). We cannot read its contents, and we cannot recover it if you lose both your passphrase and your phone.</p>
-<p><strong>Subscription.</strong> Purchases are processed by Apple. RevenueCat, our purchase provider, receives your purchase history from Apple, together with your account identifier if you are signed in or a random identifier if you are not, so that the app can tell whether Tuhfa Plus is active. We do not receive your payment details.</p>
-<p><strong>Error reports (off unless you turn them on).</strong> When on, the app sends a fixed error code, the app version and the build number to our error-reporting provider, Sentry. Error reports never include cycle data, your account or a device identifier.</p>
-<p><strong>Analytics (off unless you turn them on).</strong> When on, the app sends usage events to our analytics provider, PostHog, under one shared anonymous identifier. Analytics never include cycle data and are not linked to you.</p>
-<p><strong>Apple Health (Tuhfa Plus, optional).</strong> If you allow it, Tuhfa reads your menstrual flow records from Apple Health and adds the ones you choose to your records on your phone. Tuhfa never writes to Apple Health. Data read from Apple Health is never used for advertising or marketing, and it never leaves your phone: it is not included in cloud backups.</p>
-<p><strong>Location (optional).</strong> If you tap "Use current location", your location is used on your phone to calculate prayer times and is stored rounded. It is not sent to us, except inside your encrypted backup.</p>
-<p><strong>Messages you send us (optional).</strong> If you use Report a problem, or write to the support address, your mail app sends us your email address and your message. If you turn on Add my summary, the message also contains today's result, the reasons for it and your madhhab; the reasons can mention a pregnancy, a birth or a pregnancy loss. Messages arrive in an inbox provided by Google (Gmail).</p>
-<p><strong>Network connections.</strong> Each service the app connects to (Supabase and Apple, RevenueCat when you use Tuhfa Plus, and Sentry or PostHog only if you turn them on) receives your device's IP address as part of the connection. The app does not send any other device identifier.</p>
+<h3>Cloud account (optional)</h3>
+<p>If you sign in with Apple, we receive a sign-in token from Apple that holds an identifier Apple creates for your use of this app. We do not ask Apple for your name or email. Our backend provider, Supabase, creates an account identifier for you.</p>
+<h3>Encrypted backup (Tuhfa Plus)</h3>
+<p>Before a backup leaves your phone, your records are encrypted on the phone with a key derived from a recovery passphrase that only you know. We store the encrypted file and basic details about it (your account identifier, its number, when it was made, its size and checksums). The file also holds your backup key, locked with your passphrase. We cannot read its contents, and we cannot recover it if you lose both your passphrase and your phone.</p>
+<h3>Subscription</h3>
+<p>Purchases are processed by Apple. RevenueCat, our purchase provider, receives your purchase history from Apple, together with your account identifier if you are signed in or a random identifier if you are not, so that the app can tell whether Tuhfa Plus is active. RevenueCat also receives an identifier Apple assigns to this app on your device (the identifier for vendor), your device model, your language settings and your App Store country. We do not receive your payment details.</p>
+<h3>Error reports (off unless you turn them on)</h3>
+<p>When on, the app sends a fixed error code, the app version and the build number to our error-reporting provider, Sentry. Error reports never include cycle data, your account or a device identifier.</p>
+<h3>Analytics (off unless you turn them on)</h3>
+<p>When on, the app sends usage events to our analytics provider, PostHog, under one shared anonymous identifier. Analytics never include cycle data and are not linked to you.</p>
+<h3>Apple Health (Tuhfa Plus, optional)</h3>
+<p>If you allow it, Tuhfa reads your menstrual flow records from Apple Health and adds the ones you choose to your records on your phone. Tuhfa never writes to Apple Health. Data read from Apple Health is never used for advertising or marketing, and it never leaves your phone: it is not included in cloud backups.</p>
+<h3>Location (optional)</h3>
+<p>If you tap "Use current location", your location is used on your phone to calculate prayer times and is stored rounded. It is not sent to us, except inside your encrypted backup.</p>
+<h3>Messages you send us (optional)</h3>
+<p>If you use Report a problem, or write to the support address, your mail app sends us your email address and your message. If you turn on Add my summary, the message also contains today's result, the reasons for it and your madhhab; the reasons can mention a pregnancy, a birth or a pregnancy loss. Messages arrive in an inbox provided by Google (Gmail).</p>
+<h3>Network connections</h3>
+<p>Each service the app connects to (Supabase and Apple, RevenueCat when you are signed in or use Tuhfa Plus, and Sentry or PostHog only if you turn them on) receives your device's IP address as part of the connection; PostHog is set to discard it and Sentry not to store it. Apart from the identifier for vendor that RevenueCat receives, the app sends no device identifier, and it never sends an advertising identifier.</p>
 
 <h2>What we never collect</h2>
 <p>Your name, phone number, contacts, photos, precise location or advertising identifier. We do not receive your email address or your records in readable form unless you write to us.</p>
 
 <h2>How long we keep data</h2>
-<p>Encrypted backups and your account are kept until you delete them or delete your account. Rate-limit records are deleted after one day. Records of subscription events and of account-deletion requests contain no health data and are kept only as long as needed to operate the service and meet legal obligations. Our providers keep their own records under their own policies.</p>
+<p>Encrypted backups and your account are kept until you delete them or delete your account. Rate-limit records are deleted after one day. Records of account-deletion requests hold no account details and are deleted after 30 days. Records of subscription events contain no health data and are kept only as long as needed to operate the service and meet legal obligations. Our providers keep their own records under their own policies.</p>
 
 <h2>Your choices and rights</h2>
 <ul>
