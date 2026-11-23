@@ -22,7 +22,7 @@
 <h3>Cloud account (optional)</h3>
 <p>If you sign in with Apple, we receive a sign-in token from Apple that holds an identifier Apple creates for your use of this app. We do not ask Apple for your name or email. Our backend provider, Supabase, creates an account identifier for you.</p>
 <h3>Encrypted backup (Tuhfa Plus)</h3>
-<p>Before a backup leaves your phone, your records are encrypted on the phone with a key derived from a recovery passphrase that only you know. We store the encrypted file and basic details about it (your account identifier, its number, when it was made, its size and checksums). The file also holds your backup key, locked with your passphrase. We cannot read its contents, and we cannot recover it if you lose both your passphrase and your phone.</p>
+<p>Before a backup leaves your phone, your records are encrypted on the phone with a random key, and that key is locked with a recovery passphrase that only you know. We store the encrypted file and basic details about it (your account identifier, its number, when it was made, its size and checksums). The file also holds your backup key, locked with your passphrase. We cannot read its contents, and we cannot recover it if you lose both your passphrase and your phone.</p>
 <h3>Subscription</h3>
 <p>Purchases are processed by Apple. RevenueCat, our purchase provider, receives your purchase history from Apple, together with your account identifier if you are signed in or a random identifier if you are not, so that the app can tell whether Tuhfa Plus is active. RevenueCat also receives an identifier Apple assigns to this app on your device (the identifier for vendor), your device model, your language settings and your App Store country. We do not receive your payment details.</p>
 <h3>Error reports (off unless you turn them on)</h3>
@@ -49,9 +49,9 @@
 <li>Erase everything on your phone: Settings &gt; Privacy and data &gt; Delete all app data from this device.</li>
 <li>Delete individual backups in Settings &gt; Cloud backup, or your whole cloud account and every backup in Settings &gt; Account. Deleting your account does not cancel an App Store subscription; cancel it in your Apple Account settings.</li>
 <li>Turn error reports and analytics on or off at any time in Settings.</li>
-<li>Export your records as text at any time.</li>
+<li>Share a text summary of today's answer, with the records it used, at any time.</li>
 </ul>
-<p>Depending on where you live, you may have rights to access, correct, delete or port your data, or to object to processing. Because your records are encrypted with your own passphrase, most of them can only be accessed through the app itself. To make a request, write to <span class="mail">abouelenein.baz@gmail.com</span>.</p>
+<p>Depending on where you live, you may have rights to access, correct, delete or port your data, or to object to processing. Because your records are encrypted on your phone, most of them can only be accessed through the app itself. To make a request, write to <span class="mail">abouelenein.baz@gmail.com</span>.</p>
 
 <h2>Children</h2>
 <p>Tuhfa is not directed to children under 13, and we do not knowingly collect personal information from them.</p>
